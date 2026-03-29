@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(215, 225, 231);
+}
+
+
+.cover {
+    width: 300px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover; 
+    flex-shrink: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 5px solid black;
+}
+
+.cover:hover {
+    transform: translateY(-10px);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 96%;
+    padding: 50px 60px 60px 60px;
+    box-sizing: border-box;
+    background-color: var(--bg-color, rgba(254, 254, 222));
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto 20px auto;
+}
+
+.container:hover {
+    background-color: var(--hover-bg-color, rgb(240, 240, 180));
+    transform: scale(1.03);
+    box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.title {
+    font-size: 37px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.quant {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.button {
+    background-color: #121212;
+    font-weight: 500;
+    border: 0;
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+    .cover {
+        margin-bottom: 20px;
+    }
+    .title {
+        font-size: 32px;
+        text-align: center;
+    }
+    .author {
+        text-align: center;
+    }
+    .description {
+        text-align: justify;
+    }
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
